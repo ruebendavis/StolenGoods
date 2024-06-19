@@ -21,6 +21,16 @@ $(function () {
     });
 });
 
+  $(function () {
+  
+        if  ($(window).width() >= 1280) {
+            $('.video video').attr('playsinline');
+        }
+        else {
+            $('.video video').removeAttr('playsinline');
+        }
+
+    });
 
 const scrollers = document.querySelectorAll(".scroller");
 
