@@ -39,7 +39,7 @@ body {
 
 .background {
     width: 100%;
-    background-image: url(Images/TextureBackgroun.jpeg);
+    background-image: url(Images/TextureBackground.webp);
     background-size: cover;
     display: flex;
     align-content: center;
