@@ -635,7 +635,9 @@ margin: auto;
 
    
 
-
+    body {
+        height: 100dvh;
+    }
 
  
     .video {
