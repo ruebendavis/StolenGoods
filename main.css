@@ -1,0 +1,803 @@
+/* ------------------------------------- */
+/* global styles  */
+
+* {
+    /* border */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    background-color:black;
+    animation: fadeinanimation ease 3s;
+}
+
+@keyframes fadeinanimation {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@font-face {
+    font-family: vermin;
+    src: url(Quicksand.woff);
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.background {
+    width: 100%;
+    background-image: url(Images/TextureBackgroun.jpeg);
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.content {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+}
+
+.video {
+position: relative;
+    margin-inline: auto;
+    width: 100%;
+    height: 80%;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.695); 
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.buttons {
+    margin-inline: auto;
+    height: 22%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons img {
+    width: 60px;
+    z-index: 1;
+}
+
+.buttons a {
+    opacity: 50%;
+    display: flex;
+}
+
+.activelink {
+    opacity: 100% !important;
+}
+
+.tickets a {
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px 5px;
+    border-radius: 40px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: aldrich;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.tickets a:hover {
+    background: white;
+    color: red;
+    transition: .3s ease-in-out;
+}
+
+.buttons a:hover {
+    opacity: 100% !important;
+    transition: .3s ease-in-out;
+}
+
+.buttons a:active {
+    opacity: 100%;
+}
+.buttons video:hover {
+   opacity: 100%;
+    
+}
+.buttons video:active {
+    opacity: 100%;
+}
+
+.buttons video {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 0%;
+    
+}
+p {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: Aldrich;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.Artists {
+    width: 90%;
+    position: absolute;
+    top: 13%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.artistnames {
+    width: 90%;
+    position: absolute;
+    top: 18%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.artistnames h3 {
+    font-size: 40px;
+    color: white;
+}
+
+
+.Artists img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: auto;
+    opacity: 90%;
+}
+
+.Artists a:hover {
+    color: white;
+    opacity: 100%;
+    background: rgba(0, 0, 0, 0.409);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+.Artists a {
+    opacity: 100%;
+    color: transparent;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: aldrich;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.oscarmulero {
+    background-image: url(Images/Artists/FC98.png);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center -px;
+}
+
+.Robert_Hood {
+    background-image: url(Images/Artists/BellaClaxton.png);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center -150px;
+}
+
+.Surgeon {
+    background-image: url(Images/Artists/Oots.png);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center -60px;
+}
+
+.richie-hawtin {
+    background-image: url(Images/Artists/BENPROPHET.png);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center -70px;
+}
+
+.robahwrume {
+    background-image: url(Images/Artists/GES.png);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center -50px;
+}
+
+.earlybird a {
+    font-size: 50px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 40px 40px 28px;
+    border-radius: 40px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: aldrich;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.earlybird a:hover {
+    background: white;
+    color: red;
+    transition: .3s ease-in-out;
+}
+
+h2 {
+    font-family: aldrich;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.aboutbuttons {
+    background-color: rgba(255, 0, 0, 0);
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.aboutbuttons a {
+    background-color: white;
+    opacity: 70%;
+    padding: 20px 20px 10px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: aldrich;
+    width: 400px;
+    display: block;
+    color: black;
+}
+
+.aboutbuttons a:hover {
+    background: rgb(255, 255, 255);
+    color: red;
+    transition: .3s ease-in-out;
+    opacity: 100%;
+}
+.merchscroll {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+  }
+  
+  .image-slider {
+    width: 100%;
+   
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+}
+.scroller {
+    max-width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    img {
+        width: 24vw;
+        height: 24vw;
+        z-index: 1;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+  }
+  
+  .scroller__inner img:hover {
+    transform: scale(1.2);
+  }
+  .scroller__inner {
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow-x: hidden;
+   
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+
+
+h3 {
+    font-family: aldrich;
+    font-size: 1.5vw;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 125%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase; 
+    white-space: nowrap;
+}
+.socialbuttons {
+    width: 90%;
+    bottom: 30%;
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+}
+.socialbuttons a {
+    padding: 5px;
+    color: transparent;
+}
+.menubutton {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    text-decoration: none;
+}
+.menubutton a {
+    display: flex;
+    opacity: 50%;
+}
+.menubutton video {
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    left: 10%;
+    top: .5%;
+    opacity: 50%;
+}
+
+.menubutton img{
+    z-index: 1;
+}
+.menubutton a:hover {
+    opacity: 100% !important;
+}
+.artisttext {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0%;
+    h4{
+        color: rgb(255, 255, 255);
+        padding: 10px 20px 5px;
+        border-radius: 20px;
+    }
+}
+
+h4 {
+    font-family: aldrich;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.triangle {
+    scale: 0.3;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40%;
+    left: 80%;
+ }
+ .triangle a {
+    border-style: solid;
+    border-width: 0 50px 86.6px 50px;
+    border-color: transparent transparent #FFFFFF transparent;
+    opacity: 50%;
+    transition: 0.3s ease-in-out;
+ }
+ .triangle a:hover {
+    opacity: 100%;
+ }
+ .triangle2 {
+    scale: 0.3;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 40%;
+    right: 80%;
+ }
+.triangle2 a {
+    border-style: solid;
+    border-width: 0 50px 86.6px 50px;
+    border-color: transparent transparent #FFFFFF transparent;
+    opacity: 50%;
+    transition: 0.3s ease-in-out;
+}
+.triangle2 a:hover {
+    opacity: 100%;
+}
+ .artistnames a {
+    font-family: aldrich;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+
+    text-transform: uppercase;
+}
+.newsletter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    align-content: center;
+    z-index: 99;
+    
+}
+#closebutton {
+  color: white;  
+  font-family: aldrich;
+  font-size: 60px;
+  cursor: pointer;
+}
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+    z-index: 99;
+}
+.newsletter input {
+    
+    font-family: aldrich;
+    font-size: 50px;
+}
+.newsletter button {
+    font-family: aldrich;
+    font-size: 50px;
+margin: auto;
+}
+.newsletteractive {
+    opacity: 100%;
+    display: flex;
+    background: black;
+}
+.hamburger {
+    display: none;
+}
+
+.mobilebuttons {
+    display: none;
+}
+
+.artistaboutbutton {
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px 5px;
+    border-radius: 40px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: aldrich;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    display: block !important;
+    cursor: pointer;
+ }
+ .artistaboutbutton:hover {
+    background: rgb(255, 255, 255);
+    color: red;
+    transition: .3s ease-in-out;
+    opacity: 100%;
+ }
+
+ .textactive {
+    opacity: 100%;
+
+}
+/*----------------------------------------------*/
+
+/* MOBILE CSS  */
+
+/*----------------------------------------------*/
+
+
+
+@media screen and (max-width:1280px){
+
+   
+
+
+
+ 
+    .video {
+        height: 90%;
+    }
+
+
+    .hamburger{
+      
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .hamburger a {
+        display: flex;
+        position: relative;
+    }
+    .hamburger img {
+        z-index: 1;
+    }
+    .hamburger video {
+        width: 40px;
+        height: 50px;
+        position: absolute;
+        left: 10%;
+        top: .5%;
+    }
+    .active{
+    
+    bottom: 0 !important;
+        background: black;
+       
+        
+    }
+    .mobilebuttons img {
+        width: 60px;
+        z-index: 1;
+    }
+    .mobilebuttons video {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        position: absolute;
+      
+        
+    }
+    .mobilebuttons a {
+        opacity: 50%;
+        display: flex;
+    }
+    .Artists {
+        display: none;
+    }
+ .mobilebuttons {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -100%;
+ display: flex;
+    z-index: 100;
+    transition:1s;
+ }
+ 
+ .buttons {
+    display: none;
+ }
+ .artistnames {
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: auto;
+ }
+ .artistnames a {
+   text-decoration: none;
+   color: #FFFFFF;
+   line-height: 70px;
+   text-align: center;
+ }
+ .artisttext {
+    position: absolute;
+    left: 50%;
+top: 5%;
+    transform: translate(-50%,0%);
+    width: 65%;
+    opacity: 0%;
+    transition: ease-in-out 0.3s;
+    z-index: 99;
+    
+}
+.artisttext h4 {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px 5px;
+    border-radius: 40px;
+}
+
+.textactive {
+    opacity: 100%;
+
+}
+ .menubutton {
+    display: none;
+ }
+ .hamburger video {
+    z-index: -999;
+ }
+ .artistaboutbutton {
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px 5px;
+    border-radius: 40px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: aldrich;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    display: block !important;
+ }
+ .aboutbuttons {
+    flex-direction: column;
+    align-content: center;
+ }
+.merch {
+    display: none;
+}
+.scroller {
+    height: 80%;
+}
+ .scroller__inner {
+    flex-direction: column;
+    img {
+        width: 70vw;
+        height: 70vw;
+    }
+ }
+ @keyframes scroll {
+    to {
+      transform: translateY(calc(-50% - 0.5rem));
+    }
+  }
+
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 20s;
+  }
+  
+  
+}
